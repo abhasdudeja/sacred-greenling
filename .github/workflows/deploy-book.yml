@@ -46,7 +46,7 @@ jobs:
     # Build the book
     - name: Build the book
       run: |
-        jupyter-book build CitytoOSMNx.ipynb
+        jupyter-book build CitytoOSMNx.ipynb -v
 
     # Upload the book's HTML as an artifact
     - name: Upload artifact
@@ -57,4 +57,4 @@ jobs:
     # Deploy the book's HTML to GitHub Pages
     - name: Deploy to GitHub Pages
       id: deployment
-      uses: actions/deploy-pages@v2
+      uses: actions/deploy-pages@v2 -v
